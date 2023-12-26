@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SHOPTOM</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+
+    body {
+      padding-top:6px; 
+    }
+
+    .navbar-brand {
+      margin-right: 90px;
+      font-size: 28px;
+    }
+    .sale h3 {
+      background-color: rgb(53, 109, 228);
+      padding: 14px 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sale span {
+      color: rgb(213, 237, 36);
+    }
+    .navbar-nav.left-menu {
+      margin-right: auto;
+    }
+
+    .navbar-nav.left-menu .nav-item {
+      margin-right: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.left-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-nav.right-menu {
+      margin-left: auto;
+    }
+    .navbar-nav.right-menu .nav-item {
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.right-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-toggler {
+      order: -1; /* Move the toggle button to the left */
+    }
+    .carousel-inner img {
+    width: 100%;
+    height: 60%;
+    padding-left: 40px;
+    padding-right: 40px;
+    object-fit: cover;
+  }
+  .container svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  .container svg:hover {
+    transform: scale(1.20);
+  }
+   .breadcrumb {
+    background-color: #fff;
+    margin-left: 30px;
+   }
+   .breadcrumb a {
+    color: grey;
+    text-decoration: none;
+    font-weight: 700;
+   }
+   /*thong tin card*/
+   .card {
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(102, 101, 101, 0.2);
+}
+.card p {
+    color: red;
+  font-weight: 600;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(19, 28, 183, 0.4);
+}
+
+.container .btn {
+      background-color: rgb(15, 46, 148);
+      color: white;
+      border: none;
+    }
+    .container .btn:hover {
+        background-color: azure;
+        color: rgb(52, 65, 203);
+        border: 2px solid rgb(27, 126, 207);
+    }
+    .container svg {
+        margin-right: 7px;
+        margin-bottom: 4px;
+    }
+    .container span {
+        transition: transform 0.3s ease-in-out;
+    }
+    .container span:hover {
+        transform: scale(1.20);
+    }
+    .card-body a {
+        color: black;
+        text-decoration: none;
+    }
+    .thetong1 .card {
+        border: 1px solid rgb(223, 217, 217);
+
+    }
+     /*phan footer*/
+     .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 0;
+      margin-top: 20px;
+    }
+
+    .footer h4 {
+      color: #f8f9fa;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer ul  {
+      list-style: none;
+      padding: 0;
+    }
+  /*danh muc san pham*/
+.card {
+    border: none;
+}
+.danhmucsanpham .card-link {
+    color: black;
+}
+.fade-in-left {
+	-webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fade-in-right {
+	-webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="sale">
+    <h3 class="text-center">ĐANG CÓ CHƯƠNG TRÌNH GIẢM GIÁ <span>30%</span></h3>
+  </div>
+<!--phan mo dau-->
+  <div class="container">
+    <nav class="navbar navbar-expand-sm">
+      <!-- Chỗ nhập và thẻ a -->
+      <h3 class="navbar-brand" style="color: red;">SHOPTOM</h3>
+      <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm....">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black"
+          class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="black"
+          class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg></a>
+    </nav>
+  </div>
+<!--thanh dieu huong-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav left-menu">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Thông tin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Danh mục</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s3.html">Sản phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Liên hệ</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav right-menu">
+        <li class="nav-item">
+         <a class="nav-link" style="margin-right: 40px;" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>Giỏ hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+          </svg>Vận chuyển</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--end-->
+<!--thong tin dau-->
+<!---->
+<div class="thongtinhangdau " style="margin-top: 18px;">
+    <div class="row">
+        <div class="col-md-7">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item" ><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">GIÀY NIKE</a></li><span class="spinner-grow text-primary"></span>
+            </ul>
+        </div>
+        <div class="col-md-3 fade-in-right">
+            <p style="margin-left: 38px;">Hiển thị 1 đến 16 của 79 sản phẩm</p>
+        </div>
+        <div class="col-md-2">
+            <div class="dropdown fade-in-right">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Theo đánh giá
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Giá trung bình</a>
+                  <a class="dropdown-item" href="#">Giá thấp đến cao</a>
+                  <a class="dropdown-item" href="#">Giá cao đến thấp</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<!---->
+
+<!--thong tin san pham trong danh sach-->
+<div class="thongtinchung">
+        <div class="thongtindanhmuc">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="danhmucsanpham fade-in-left" style="margin-left: 13px;">
+                        <h5 style="margin-left: 13px;">DANH MỤC SẢN PHẨM</h5>
+                        <div id="accordion">
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                Flash Sale
+                              </a>
+                            </div>
+                            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                Giày Adidas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#" style="color: blue;">Adidas Forum</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Alphabounce</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#" style="color: blue;">EQT</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Prophere</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Superstar</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Ultra Boost</a></p>
+                               <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Yeezy</a></p>
+                              </div>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                Giày Converse
+                              </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#jordan">
+                                Giày Jordan<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                              </a>
+                            </div>
+                            <div id="jordan" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Jordan 1</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Jordan 4</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#luxury">
+                                Giày Luxury<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                              </a>
+                            </div>
+                            <div id="luxury" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Giày Dior</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Giày Gucci</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Giày LV</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#MLB">
+                                Giày MLB
+                              </a>
+                            </div>
+                            <div id="MLB" class="collapse" data-parent="#accordion">
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#nike">
+                                Giày Nike<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                              </a>
+                            </div>
+                            <div id="nike" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">Air Force 1</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">SB dunk</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#balance">
+                                New Balance<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                              </a>
+                            </div>
+                            <div id="balance" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">NB 300</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">NB 550</a></p>
+                                <p style="border-bottom: 1px solid rgb(213, 209, 209);"><a href="#"style="color: blue;">NB 574</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed card-link" data-toggle="collapse" href="#vans">
+                                Giày Vans
+                              </a>
+                            </div>
+                            <div id="vans" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--thong tin cam ket-->
+                          <div class="camket" style="border: 1px solid grey; padding: 14px 14px;margin-top: 14px;margin-left: 13px;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="bi bi-shield-fill-check" viewBox="0 0 16 16" style="margin-left: 15px;">
+                                        <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
+                                      </svg><p>Hoàn tiền <strong>100%</strong> nếu không đúng hàng</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16"style="margin-left: 15px;">
+                                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                                      </svg> <p>Nhận hàng và cho kiểm tra hàng đúng ý và nhận hàng</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="bi bi-reply-all-fill" viewBox="0 0 16 16"style="margin-left: 15px;">
+                                        <path d="M8.021 11.9 3.453 8.62a.719.719 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                                        <path d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945a.5.5 0 0 1-.042.028.147.147 0 0 0 0 .252.503.503 0 0 1 .042.028l4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106z"/>
+                                      </svg><p>Đổi trả trong <strong>7 ngày</strong> nếu sản phẩm lỗi và có hư hại</p>
+                                </div>
+                            </div>
+                          </div>
+                          <!--end-->
+                          <!--lien he qua thong tin-->
+                          <div class="dathang" style="border: 1px solid grey; padding: 14px 14px; margin-top: 15px; margin-left: 13px;">
+                            <div class="thongtindathang" style="text-align: center;">
+                                <p>Hotline đặt hàng</p>
+                                <p style="font-size: 19px; color: red; font-weight: 800;">0123.456.789</p>
+                                <p>(Zalo, 8h30 - 22h mở T7 và CN)</p>
+                            </div>
+                           </div>
+                          <!--end-->
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-9">
+                    <!--4 hang 1-->
+                    <div class="thetong1 fade-in-right">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://lishop.store/image/cache/products/9/1/8/nike-air-force-1-lv8-world-champ-1000x1000.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://lishop.store/image/cache/products/9/1/8/nike-air-force-1-lv8-world-champ-1000x1000.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://lishop.store/image/cache/products/9/1/8/nike-air-force-1-lv8-world-champ-1000x1000.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://lishop.store/image/cache/products/9/1/8/nike-air-force-1-lv8-world-champ-1000x1000.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+                    <!--4 hang 2-->
+                    <div class="thetong1" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://grailify.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOERwQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--34325a39c789b2bf9143d29fd6d950dbf5770f5f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtDSUFOcEFpQURPZ3h4ZFdGc2FYUjVhVjg9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ea1da7d273fb4fac2f3bf305727b365ca4d6c39a/Image%200" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 3px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+                    <!--4 hang 3-->
+                    <div class="thetong1" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Converse Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                                <div class="card">
+                                  <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/05/giay-converse-chuck-taylor-all-star-1970s-rivals-168628c-mau-den-trang-645ee945226c2-13052023083501.jpg" class="card-img-top" alt="Product Image">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><a href="" style="color: black; text-decoration: none;font-weight: 400;">Giày Nike Air Max 90G-CU9978-101</a></h5>                                    <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                                    <div class="daban">
+                                        <div class="row">
+                                          <div class="col-md-8">
+                                            <p style="color: grey;">Đã bán:79</p>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                      </svg>Thêm giỏ hàng</a>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                        </div>
+                    </div>
+                    <!--end-->
+                    <!--4 hang 4-->
+                   <div class="thetong1" style="margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-sm-3">
+                          <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                          <div class="card">
+                            <img src="https://brooklyn-shop.de/cdn/shop/products/26e4473683b46e06c154ed80310e9303_grande.jpg?v=1607691613" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s4.html" style="color: black; text-decoration: none;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                              <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                              <div class="daban">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <p style="color: grey;">Đã bán:79</p>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>Thêm giỏ hàng</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                          <div class="card">
+                            <img src="https://brooklyn-shop.de/cdn/shop/products/26e4473683b46e06c154ed80310e9303_grande.jpg?v=1607691613" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                              <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                              <div class="daban">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <p style="color: grey;">Đã bán:79</p>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>Thêm giỏ hàng</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                          <div class="card">
+                            <img src="https://brooklyn-shop.de/cdn/shop/products/26e4473683b46e06c154ed80310e9303_grande.jpg?v=1607691613" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                              <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                              <div class="daban">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <p style="color: grey;">Đã bán:79</p>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>Thêm giỏ hàng</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 4px;">Giảm giá 28%</span>
+                          <div class="card">
+                            <img src="https://brooklyn-shop.de/cdn/shop/products/26e4473683b46e06c154ed80310e9303_grande.jpg?v=1607691613" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+                              <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+                              <div class="daban">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <p style="color: grey;">Đã bán:79</p>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-primary" style="color: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;" >
+                                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>Thêm giỏ hàng</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--end -->
+                   </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+       <!-- Phần Footer -->
+ <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>GIỚI THIỆU</h4>
+          <p>SHOPTOM nơi trao tặng các sản phẩm giày thời trang trẻ trung, phong cách, bắt trend cho giới trẻ.</p>
+          <p><strong>Địa chỉ:</strong>Trường Đại Học Nam Cần Thơ</p>
+        </div>
+        <div class="col-md-4">
+          <h4>CÁC CHÍNH SÁCH</h4>
+          <ul>
+            <li><a href="#">Chính sách bảo mật của SHOPTOM</a></li>
+            <li><a href="#">Chính sách bảo hành củaSHOPTOM</a></li>
+            <li><a href="#">Chính sách đổi trả hoàn tiền của SHOPTOM</a></li>
+            <li><a href="#">Phương thức thanh toán của SHOPTOM</a></li>
+            <li><a href="#">Chính sách vận chuyển của SHOPTOM</a></li>
+            <li><a href="#">Hình thức vận chuyển</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tác giả</a></li>
+            <li><a href="#">SHOPTOM.com</a></li>
+            <li>Mua hàng: 0932433160 (7h30-22h)</li>
+            <li>(Tất cả các ngày trong tuần)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+          <p><a href="#">Website Shop Giày Replica chuẩn 1:1</a></p>
+          <p><a href="#">Shop Giày Replica</a></p>
+          <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+          <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+        </div>
+        <div class="col-md-4">
+          <h4>DMCA.com Protection Status</h4>
+          <p>Hotline: 0123.333.456</p>
+          <p>Email:TOM@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SHOPTOM</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+
+    body {
+      padding-top:6px; 
+    }
+
+    .navbar-brand {
+      margin-right: 90px;
+      font-size: 28px;
+    }
+    .sale h3 {
+      background-color: rgb(53, 109, 228);
+      padding: 14px 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sale span {
+      color: rgb(213, 237, 36);
+    }
+    .navbar-nav.left-menu {
+      margin-right: auto;
+    }
+
+    .navbar-nav.left-menu .nav-item {
+      margin-right: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.left-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-nav.right-menu {
+      margin-left: auto;
+    }
+    .navbar-nav.right-menu .nav-item {
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.right-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-toggler {
+      order: -1; /* Move the toggle button to the left */
+    }
+    .carousel-inner img {
+    width: 100%;
+    height: 60%;
+    padding-left: 40px;
+    padding-right: 40px;
+    object-fit: cover;
+  }
+  .container svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  .container svg:hover {
+    transform: scale(1.20);
+  }
+   .breadcrumb {
+    background-color: #fff;
+    margin-left: 30px;
+   }
+   .breadcrumb a {
+    color: grey;
+    text-decoration: none;
+    font-weight: 700;
+   }
+  
+     /*phan footer*/
+     .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer h4 {
+      color: #f8f9fa;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer ul  {
+      list-style: none;
+      padding: 0;
+    }
+  /*danh muc san pham*/
+.card {
+    border: none;
+}
+.danhmucsanpham .card-link {
+    color: black;
+}
+/**/
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container-login {
+  max-width: 920px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 27px;
+  margin-left: 10px;
+}
+
+.product img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+  margin-left: 80px;
+}
+
+
+.product-info {
+  flex: 1;
+  padding: 10px;
+}
+
+#cartContainer {
+  max-width: 400px;
+}
+
+/* Thêm border cho danh sách giỏ hàng */
+#cartContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Scrollbar cho danh sách giỏ hàng */
+#cartContainer {
+  overflow-y: auto;
+  max-height: 400px;
+}
+.product:hover {
+  background-color: #f8f9fa;
+}
+.checkout button {
+  padding: 10px 20px;
+}
+.checkout {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+form input,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #555;
+  display: none; /* Ẩn thông báo mặc định */
+}
+
+#cartContainer:hover .empty-cart {
+  display: block; /* Hiển thị khi hover vào giỏ hàng */
+}
+.duonglienket svg{
+  margin-right: 12px;
+
+}
+.uudai2 .card {
+  border: 1px solid rgb(228, 226, 226);
+}
+.fade-in-left {
+	-webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fade-in-right {
+	-webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="sale">
+    <h3 class="text-center">ĐANG CÓ CHƯƠNG TRÌNH GIẢM GIÁ <span>30%</span></h3>
+  </div>
+<!--phan mo dau-->
+  <div class="container">
+    <nav class="navbar navbar-expand-sm">
+      <!-- Chỗ nhập và thẻ a -->
+      <h3 class="navbar-brand" style="color: red;">SHOPTOM</h3>
+      <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm....">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black"
+          class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="black"
+          class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg></a>
+    </nav>
+  </div>
+<!--thanh dieu huong-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav left-menu">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Thông tin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Danh mục</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s3.html">Sản phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Liên hệ</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav right-menu">
+        <li class="nav-item">
+         <a class="nav-link" style="margin-right: 40px;" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>Giỏ hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+          </svg>Vận chuyển</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--end-->
+<!--thong tin dau-->
+
+<!---->
+      <div class="thanhtoansanpham" style="margin-left: 140px;">
+        <div class="row">
+            <div class="col-md-4">
+              <div class="tieudegiohang fade-in-left" style="margin-top: 19px;text-align: center;border: 1px solid rgb(196, 193, 193);padding: 8px 8px;margin-left: 10px;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);border-radius: 10px; background-color: rgb(248, 245, 245);">
+                <h5 style="font-weight: 700;font-size: 15px;">GIỎ HÀNG CỦA BẠN</h5>
+              </div>
+                <div class="product fade-in-left">
+                        <div id="cartContainer"></div>
+                    </div>
+                    <div id="emptyCartMessage" class="empty-cart fade-in-left">
+                        <p>Giỏ hàng của bạn trống!</p>
+                        <!-- Bạn có thể thêm hình ảnh hoặc biểu tượng động ở đây -->
+                      </div>
+                     <div class="khungtongtien" style="background-color: rgb(225, 224, 224); padding: 13px 13px;">
+                      <div id="tieude" style="margin-left: 11px;"></div>
+                      <div id="totalPriceContainer"style="margin-left: 11px;"></div>
+                     </div>
+            </div>
+            <div class="col-md-8">
+                <div class="container-login fade-in-right" style="margin-right: 70px;">
+                      <div class="checkout ">
+                        <h2 class="text-center">THÔNG TIN THANH TOÁN</h2>
+                        <form>
+                          <label for="name">Họ và tên:</label>
+                          <input type="text" id="name" name="name" required>
+                
+                          <label for="phone">Số điện thoại:</label>
+                          <input type="tel" id="phone" name="phone" required>
+                
+                          <label for="address">Địa chỉ:</label>
+                          <input type="text" id="address" name="address" required>
+
+                          <div class="chia" style="display: flex;">
+                           
+                          <input type="text" id="address" name="address" required placeholder="Quận / huyện">
+                          
+                          <input type="text" id="address" name="address" required placeholder="Tỉnh / Thành phố">
+                          </div>
+                
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" required>
+                
+                          <label for="payment">Phương thức thanh toán:</label>
+                          <select id="payment" name="payment" required>
+                            <option value="credit">Thẻ tín dụng</option>
+                            <option value="paypal">PayPal</option>
+                          </select>
+                
+                          <button type="submit">Hoàn tất thanh toán</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+      </div>
+ <!--goi y thêm mau-->
+<!--gia uu dai hom nay-->
+<div class="giauudai" style="padding: 15px 18px; ">
+  <div class="uudai1" style="background-color: rgb(233, 106, 28);padding: 12px 12px;">
+    <div class="row">
+      <div class="col-10">
+        <h5 style="color: #f8f9fa;margin-top: 15px;font-weight: 700;">CÁC SẢN PHẨM ĐANG CÓ LƯỢT BÁN CAO</h5>
+      </div>
+      <div class="col-2">
+        <h6 style="color: #f8f9fa; border: 1px solid white; padding: 12px 12px; border-radius: 35px; margin-left: 16px;"><a href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s6.html" style="color: #fff; text-decoration: none;">XEM TẤT CẢ</a><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+          <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+          <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg></h6>
+      </div>
+    </div>
+  </div>
+  <div class="uudai2" style="margin-top: 15px;">
+    <div class="row">
+      <div class="col-sm-3">
+        <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 1px;">Giảm giá 10%</span>
+        <div class="card">
+          <img src="https://brooklyn-shop.de/cdn/shop/products/26e4473683b46e06c154ed80310e9303_grande.jpg?v=1607691613" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title"><a href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s4.html" style="color: black; text-decoration: none;">Giày Nike Air Max 90G-CU9978-101</a></h5>
+            <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+            <div class="daban">
+              <div class="row">
+                <div class="col-md-9">
+                  <p style="color: grey;">Đã bán:79</p>
+                </div>
+                <div class="col-md-3">
+                  <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg></p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16" >
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>Thêm giỏ hàng</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 1px;">Giảm giá 10%</span>
+        <div class="card">
+          <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/140/774/products/vans-viet-nam-vans-vault-old-skool-lx-black-vn0a4p3xoiu.jpg" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày VANS VAULT OG Old school-Việt Nam</a></h5>
+            <p class="card-text"><del style="margin-right: 8px;color: grey;">1.799.000</del>1.699.000 VNĐ</p>
+            <div class="daban">
+              <div class="row">
+                <div class="col-md-9">
+                  <p style="color: grey;">Đã bán:79</p>
+                </div>
+                <div class="col-md-3">
+                  <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg></p>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart('Giày VANS VAULT OG Old school-Việt Nam', '1.699.000 VNĐ', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/140/774/products/vans-viet-nam-vans-vault-old-skool-lx-black-vn0a4p3xoiu.jpg')">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 1px;">Giảm giá 10%</span>
+        <div class="card">
+          <img src="https://lakbay.vn/cdn1/images/202006/goods_img/giay-yeezy-boost-350-v2-cream-white-replica-nam-nu-tai-ha-noi-P1523-1591497824713.jpg" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày Adidas Replica 1:1 Chất lượng</a></h5>
+            <p class="card-text"><del style="margin-right: 8px;color: grey;">799.000</del>699.000 VNĐ</p>
+            <div class="daban">
+              <div class="row">
+                <div class="col-md-9">
+                  <p style="color: grey;">Đã bán:79</p>
+                </div>
+                <div class="col-md-3">
+                  <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg></p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16" >
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>Thêm giỏ hàng</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <span class="badge badge-pill badge-danger" style="color: rgb(237, 232, 232);margin-bottom: 1px;">Giảm giá 10%</span>
+        <div class="card">
+          <img src="https://product.hstatic.net/1000382698/product/a01388c-1_744b981580fa4afbab5b3a38a5772865_master.jpg" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title"><a href="#" style="color: black; text-decoration: none;">Giày Converse chuck 70-chính hãng chất lượng cao</a></h5>
+            <p class="card-text"><del style="margin-right: 8px;color: grey;">2.799.000</del>2.699.000 VNĐ</p>
+            <div class="daban">
+              <div class="row">
+                <div class="col-md-9">
+                  <p style="color: grey;">Đã bán:79</p>
+                </div>
+                <div class="col-md-3">
+                  <p style="color: grey;">5<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-bottom: 6px;">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg></p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16" >
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>Thêm giỏ hàng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!--end-->
+      <!--thong tin ket 2-->
+<div class="phantongchung" style="margin-top: 25px; padding: 14px 16px; background-color: rgb(239, 237, 237);">
+  <div class="row">
+    <div class="col-md-4">
+      <h5>ĐĂNG KÍ NHẬN TIN</h5>
+      <p style="font-size: 12px;">NHẬP EMAIL ĐỂ NHẬN THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI.</p>
+    </div>
+    <div class="col-md-4">
+      <form class="form-inline" action="/action_page.php" style="margin-top: 18px;">
+        <label for="email" class="mr-sm-2">Email address:</label>
+        <input type="email" class="form-control" placeholder="Enter email" id="email"><button class="btn btn-primary" style="color: #fff; background-color: black;margin-bottom: 8px;">GỬI</button>
+      </form>
+    </div>
+    <div class="col-md-4">
+       <div class="duonglienket" style="margin-top: 18px;">
+        Các đường dẫn : <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+          <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+          <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+       </div>
+    </div>
+  </div>
+</div>
+ <!-- Phần Footer -->
+ <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>GIỚI THIỆU</h4>
+        <p>SHOPTOM nơi trao tặng các sản phẩm giày thời trang trẻ trung, phong cách, bắt trend cho giới trẻ.</p>
+        <p><strong>Địa chỉ:</strong>Trường Đại Học Nam Cần Thơ</p>
+      </div>
+      <div class="col-md-4">
+        <h4>CÁC CHÍNH SÁCH</h4>
+        <ul>
+          <li><a href="#">Chính sách bảo mật của SHOPTOM</a></li>
+          <li><a href="#">Chính sách bảo hành củaSHOPTOM</a></li>
+          <li><a href="#">Chính sách đổi trả hoàn tiền của SHOPTOM</a></li>
+          <li><a href="#">Phương thức thanh toán của SHOPTOM</a></li>
+          <li><a href="#">Chính sách vận chuyển của SHOPTOM</a></li>
+          <li><a href="#">Hình thức vận chuyển</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Tác giả</a></li>
+          <li><a href="#">SHOPTOM.com</a></li>
+          <li>Mua hàng: 0932433160 (7h30-22h)</li>
+          <li>(Tất cả các ngày trong tuần)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+        <p><a href="#">Website Shop Giày Replica chuẩn 1:1</a></p>
+        <p><a href="#">Shop Giày Replica</a></p>
+        <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+        <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+      </div>
+      <div class="col-md-4">
+        <h4>DMCA.com Protection Status</h4>
+        <p>Hotline: 0123.333.456</p>
+        <p>Email:TOM@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="paymentSuccessModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thanh toán thành công!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Cảm ơn bạn đã mua sắm tại SHOPTOM!</p>
+        <p style="color: rgb(237, 82, 15);"><strong>Bạn nhận được mã sale: 15%</strong> <span id="totalProducts"></span></p>
+        <p><strong>Tổng số tiền đã được thanh toán</strong> <span id="totalAmount"></span></p>
+        <p><strong>Phương thức thanh toán:</strong> <span id="paymentMethod"></span></p>
+        <p><strong>Ngày giao dự kiến:</strong> <span id="deliveryDate"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    // Lấy danh sách sản phẩm từ storage
+    let cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+    // Hiển thị thông tin sản phẩm trong trang giỏ hàng
+    let cartContainer = document.getElementById('cartContainer');
+    let totalPriceContainer = document.getElementById('totalPriceContainer');
+    let emptyCartMessage = document.getElementById('emptyCartMessage');
+    let totalAmount = 0;
+
+    // Check if the cart is empty
+    if (cartItems.length === 0) {
+        emptyCartMessage.style.display = 'block';
+    } else {
+        emptyCartMessage.style.display = 'none';
+
+        cartItems.forEach(function (item) {
+            let productDiv = document.createElement('div');
+            productDiv.innerHTML = `
+              <div class="card" style="border:1px solid grey;margin-top:20px;padding:11px 11px;">
+                <img src="${item.image}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text" style="color:red;">Giá: ${formatCurrency(item.price)} | Số lượng: 1</p>
+                </div>
+              </div>
+            `;
+            cartContainer.appendChild(productDiv);
+
+            // Tính tổng tiền cho từng sản phẩm
+            totalAmount += item.price;
+        });
+
+        // Hiển thị tổng tiền
+        updateTotalPrice(totalAmount);
+    }
+});
+
+function updateTotalPrice(totalAmount) {
+    // Hiển thị tổng tiền trong thẻ div có id là "totalPriceContainer"
+    document.getElementById('tieude').innerHTML = '<p>Miễn phí vận chuyển'
+    document.getElementById('totalPriceContainer').innerHTML = '<p style="color:black;font-weight: 700;">Tổng tiền sản phẩm: ' + formatCurrency(totalAmount) + ' VNĐ</p>';
+}
+
+// Hàm chuyển đổi số thành định dạng tiền tệ
+function formatCurrency(amount) {
+    return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
+function displayCart() {
+    // ... (phần còn lại của hàm)
+
+    // Hiển thị tổng tiền
+    updateTotalPrice(totalAmount);
+}
+
+
+// Hàm hiển thị thông báo khi thanh toán thành công
+function showPaymentSuccessModal(totalProducts, totalAmount, paymentMethod, deliveryDate) {
+    // Set giá trị cho các phần tử trong modal
+    document.getElementById('totalProducts').innerText = totalProducts;
+    document.getElementById('totalAmount').innerText = totalAmount;
+    document.getElementById('paymentMethod').innerText = paymentMethod;
+    document.getElementById('deliveryDate').innerText = deliveryDate;
+
+    // Hiển thị modal
+    $('#paymentSuccessModal').modal('show');
+  }
+
+  // Xử lý sự kiện khi người dùng click nút "Hoàn tất thanh toán"
+  document.querySelector('form').addEventListener('submit', function (event) {
+    // Ngăn chặn hành động mặc định của form
+    event.preventDefault();
+
+    // Lấy thông tin từ form (ở đây chỉ là tên và số điện thoại, bạn có thể mở rộng)
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+
+    // Thực hiện xử lý thanh toán ở đây, có thể là AJAX request hoặc bất kỳ cách nào khác
+
+    // Sau khi thanh toán thành công, hiển thị thông báo
+    showPaymentSuccessModal('', '', 'Thẻ tín dụng', '01/01/2024');
+  });
+    </script>
+    
+</body>
+
+</html>

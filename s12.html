@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SHOPTOM</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+
+    body {
+      padding-top:6px; 
+    }
+
+    .navbar-brand {
+      margin-right: 90px;
+      font-size: 28px;
+    }
+    .sale h3 {
+      background-color: rgb(53, 109, 228);
+      padding: 14px 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sale span {
+      color: rgb(213, 237, 36);
+    }
+    .navbar-nav.left-menu {
+      margin-right: auto;
+    }
+
+    .navbar-nav.left-menu .nav-item {
+      margin-right: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.left-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-nav.right-menu {
+      margin-left: auto;
+    }
+    .navbar-nav.right-menu .nav-item {
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-nav.right-menu .nav-item:hover {
+      transform: scale(1.30);
+    }
+    .navbar-toggler {
+      order: -1; /* Move the toggle button to the left */
+    }
+    .carousel-inner img {
+    width: 100%;
+    height: 60%;
+    padding-left: 40px;
+    padding-right: 40px;
+    object-fit: cover;
+  }
+  .container svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  .container svg:hover {
+    transform: scale(1.20);
+  }
+   .breadcrumb {
+    background-color: #fff;
+    margin-left: 30px;
+   }
+   .breadcrumb a {
+    color: grey;
+    text-decoration: none;
+    font-weight: 700;
+   }
+  
+     /*phan footer*/
+     .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 0;
+      margin-top: 20px;
+    }
+
+    .footer h4 {
+      color: #f8f9fa;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer ul  {
+      list-style: none;
+      padding: 0;
+    }
+  /*danh muc san pham*/
+.card {
+    border: none;
+}
+.danhmucsanpham .card-link {
+    color: black;
+}
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="sale">
+    <h3 class="text-center">ĐANG CÓ CHƯƠNG TRÌNH GIẢM GIÁ <span>30%</span></h3>
+  </div>
+<!--phan mo dau-->
+  <div class="container">
+    <nav class="navbar navbar-expand-sm">
+      <!-- Chỗ nhập và thẻ a -->
+      <h3 class="navbar-brand" style="color: red;">SHOPTOM</h3>
+      <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm....">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black"
+          class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="black"
+          class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg></a>
+    </nav>
+  </div>
+<!--thanh dieu huong-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav left-menu">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Thông tin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Danh mục</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s3.html">Sản phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Liên hệ</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav right-menu">
+        <li class="nav-item">
+         <a class="nav-link" style="margin-right: 40px;" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>Giỏ hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+          </svg>Vận chuyển</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--end-->
+<!--thong tin dau-->
+<div class="thongtinlienhe fade-in-bottom " style="padding: 17px 18px ;">
+    <h4>SHOPTOM KÍNH CHÀO</h4>
+    <p>Cám ơn bạn đã liên hệ với <span style="color: blue;">SHOPTOM</span></p>
+
+        <p>Cám ơn bạn đã quan tâm đến <span style="color: blue;">SHOPTOM</span> cũng như các sản phẩm giày replica 1 1 của chúng tôi. Nếu bạn có nhu cầu giải đáp thắc mắc về sản phẩm thì có thể liên hệ ngày qua số hotline <strong style="color: red;">0123.456.789 (zalo)</strong> hoặc bạn cũng có thể gửi tin nhắn cho chúng tôi.</p>
+        
+        Chúng tôi sẳn sàng trả lời các thắc mặc của các bạn trong thời gian sớm nhất.
+        Xin chân thành cám ơn các bạn.</p>
+</div>
+<!---->
+       <!-- Phần Footer -->
+ <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>GIỚI THIỆU</h4>
+          <p>SHOPTOM nơi trao tặng các sản phẩm giày thời trang trẻ trung, phong cách, bắt trend cho giới trẻ.</p>
+          <p><strong>Địa chỉ:</strong>Trường Đại Học Nam Cần Thơ</p>
+        </div>
+        <div class="col-md-4">
+          <h4>CÁC CHÍNH SÁCH</h4>
+          <ul>
+            <li><a href="#">Chính sách bảo mật của SHOPTOM</a></li>
+            <li><a href="#">Chính sách bảo hành củaSHOPTOM</a></li>
+            <li><a href="#">Chính sách đổi trả hoàn tiền của SHOPTOM</a></li>
+            <li><a href="#">Phương thức thanh toán của SHOPTOM</a></li>
+            <li><a href="#">Chính sách vận chuyển của SHOPTOM</a></li>
+            <li><a href="#">Hình thức vận chuyển</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tác giả</a></li>
+            <li><a href="#">SHOPTOM.com</a></li>
+            <li>Mua hàng: 0932433160 (7h30-22h)</li>
+            <li>(Tất cả các ngày trong tuần)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+          <p><a href="#">Website Shop Giày Replica chuẩn 1:1</a></p>
+          <p><a href="#">Shop Giày Replica</a></p>
+          <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+          <p><a href="#">Shop Giày Replica chuẩn 1:1</a></p>
+        </div>
+        <div class="col-md-4">
+          <h4>DMCA.com Protection Status</h4>
+          <p>Hotline: 0123.333.456</p>
+          <p>Email:TOM@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

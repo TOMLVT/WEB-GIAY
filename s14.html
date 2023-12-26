@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SHOPTOM</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+a {
+  color: #666;
+  font-size: 14px;
+  display: block;
+}
+.login-title {
+  text-align: center;
+}
+#login-page {
+  display: flex;
+}
+.notice {
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+.login {
+  width: 50%;
+  height: 100vh;
+  background: #FFF;
+  padding: 70px;
+}
+.login a {
+  margin-top: 25px;
+  text-align: center;
+}
+.form-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.form-login label {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: block;
+  color: #666;
+}
+.input-email,
+.input-password {
+  width: 100%;
+  background: #ededed;
+  border-radius: 25px;
+  margin: 4px 0 10px 0;
+  padding: 10px;
+  display: flex;
+}
+.icon {
+  padding: 4px;
+  color: #666;
+  min-width: 30px;
+  text-align: center;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 4px 0;
+  outline: none;
+}
+button[type="submit"] {
+  width: 100%;
+  border: 0;
+  border-radius: 25px;
+  padding: 14px;
+  background: #2012e0;
+  color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: ease all 0.3s;
+}
+button[type="submit"]:hover {
+ background-color: #ededed;
+ color: black;
+ border: 1px solid blue;
+}
+.background {
+  width: 70%;
+  padding: 40px;
+  height: 100vh;
+background-image: url('https://images.lifestyleasia.com/wp-content/uploads/sites/5/2020/07/02173130/THE-TEN.jpg?tr=w-1200,h-900');
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+}
+.background h1 {
+  max-width: 420px;
+  color: #FFF;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+.background p {
+  max-width: 650px;
+  color: #1a1a1a;
+  font-size: 15px;
+  text-align: right;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+.dangkyngay .tom {
+ margin-bottom: 40px;
+ text-decoration: none;
+ text-align: center;
+}
+
+
+.checkbox label {
+  display: inline;
+  margin: 0;
+}
+.flip-in-hor-bottom {
+	-webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+    </style>
+      <div id="login-page">
+  <div class="login flip-in-hor-bottom ">
+    <h2 class="login-title">Đăng nhập</h2>
+    <p class="notice">Chào mừng đến với SHOPTOM</p>
+    <form class="form-login">
+      <label for="email">E-mail</label>
+      <div class="input-email">
+        <i class="fas fa-envelope icon"></i>
+        <input type="email" name="email" placeholder="Tom197@Email" required>
+      </div>
+      <label for="password">Mật khẩu</label>
+      <div class="input-password">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" name="password" placeholder="Nhập mật khẩu..." required>
+      </div>
+      <div class="checkbox">
+        <label for="remember">
+          <input type="checkbox" name="remember">
+          Lưu tài khoản
+        </label>
+      </div>
+      <button type="submit"><i class="fas fa-door-open"></i>Đăng nhập</button>
+    </form>
+      <a href="#">Quên mật khẩu?</a>
+    <div class="dangkyngay">
+    <a href="file:///C:/Users/Admin/Downloads/WEB%20SHOP%20GI%C3%80Y/s13.html" class="tom">Bạn chưa có tài khoản : Đăng ký ngay</a>
+    </div>
+  </div>
+  <div class="background">
+  </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
